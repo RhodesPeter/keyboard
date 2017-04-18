@@ -1,5 +1,8 @@
+body {
+  background-color: #5CA793;
+}
+
 .keys {
-  min-height: 100vh;
   display: -webkit-flex;
   -webkit-align-items: center;
   flex-direction: row;
@@ -7,16 +10,68 @@
   flex-wrap: wrap;
 }
 
-.key {
-  width: 3rem;
-  margin: 0.5rem;
-  font-size: 4rem;
+.header {
   text-align: center;
-  padding: 0.4rem 1.4rem 0.8rem;
-  border: 0.2rem solid yellow;
-  transition: all 0.1s;
+  font-family: 'Francois One', sans-serif;
+  height: 25vh;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header__title {
+  color: white;
+  line-height: 4.3rem;
+  font-size: 4.2rem;
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: 0.06rem;
+}
+
+.header__instructions {
+  letter-spacing: 0.07rem;
+  color: #F7D361;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0 20px;
+}
+
+.keyboard {
+  width: 45%;
+  margin: 15px auto;
+}
+
+.metronome-dot {
+  animation: blinker 3s ease-in-out infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.key {
+  transition: all 0.08s;
+  cursor: pointer;
 }
 
 .playing {
-  transform: scale(1.1);
+  transform: scale(1.01);
+}
+
+@media (max-width: 700px) {
+  .header__title {
+    font-size: 4.5rem;
+    line-height: 3.9rem;
+    margin: 0 30px 20px 30px;
+  }
+
+  .header {
+    margin: 40px 30px 20px 30px;
+    height: 35vh;
+  }
+
+  .keyboard {
+    width: 75%;
+  }
 }
