@@ -2,18 +2,18 @@ body {
   background-color: #5CA793;
 }
 
-.keys {
+.main-container {
   display: -webkit-flex;
   -webkit-align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  height: 100vh;
 }
 
 .header {
   text-align: center;
   font-family: 'Francois One', sans-serif;
-  height: 25vh;
   display: -webkit-flex;
   -webkit-align-items: center;
   flex-direction: column;
@@ -34,7 +34,7 @@ body {
   color: #F7D361;
   font-size: 1.4rem;
   margin: 0 0 0.5rem 0;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .keyboard {
@@ -59,6 +59,12 @@ body {
   transform: scale(1.01);
 }
 
+@media (max-width: 1050px) {
+  .keyboard {
+    width: 60%;
+  }
+}
+
 @media (max-width: 700px) {
   .header__title {
     font-size: 4.5rem;
@@ -66,18 +72,7 @@ body {
     margin: 0 30px 20px 30px;
   }
 
-  .header {
-    margin: 40px 30px 20px 30px;
-    height: 35vh;
-  }
-
   .keyboard {
     width: 75%;
-  }
-}
-
-@media (max-width: 300px) {
-  .header {
-    margin-top: 100px;
   }
 }
