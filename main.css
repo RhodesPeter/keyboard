@@ -75,3 +75,9 @@ body {
     width: 75%;
   }
 }
+
+@media (max-width: 300px) {
+  .header {
+    margin-top: 100px;
+  }
+}
