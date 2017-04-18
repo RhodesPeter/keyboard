@@ -1,21 +1,19 @@
 .keys {
-  min-height: 98vh;
+  min-height: 100vh;
   display: -webkit-flex;
   -webkit-align-items: center;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  border: 2px solid red;
 }
 
 .key {
-  min-width: 48px;
-  min-height: 48px;
+  width: 3rem;
+  margin: 0.5rem;
   font-size: 4rem;
   text-align: center;
-  line-height: 2.4rem;
-  padding: 15px;
-  border: 2px solid yellow;
+  padding: 0.4rem 1.4rem 0.8rem;
+  border: 0.2rem solid yellow;
   transition: all 0.1s;
 }
 

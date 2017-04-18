@@ -1,10 +1,11 @@
 function playKey(e){
-    var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    var key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-    if (!audio){ return; }
-    key.classList.add('playing');
-    audio.currentTime = 0;
-    audio.play();
+  var dataKey = e.type === 'click' ? e.target.getAttribute("data-key") : e.keyCode;
+  var audio = document.querySelector(`audio[data-key="${dataKey}"]`);
+  var key = document.querySelector(`.key[data-key="${dataKey}"]`);
+  if (!audio){ return; }
+  key.classList.add('playing');
+  audio.currentTime = 0;
+  audio.play();
 };
 
 var keys = document.querySelectorAll('.key');
@@ -17,3 +18,4 @@ function removeTransition(e){
 }
 
 document.addEventListener('keydown', playKey);
+document.addEventListener('click', playKey);
